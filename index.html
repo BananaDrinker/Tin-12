@@ -1,22 +1,32 @@
 <html>
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Danh mục bài tập</title>
- </head>
- <body>
-   <div class="header">THPT Ngô Quyền</div>
-   <div class="menu">
-        <a href="Contents/gioithieu.html" target="noidung">giới thiệu bản thân</a>
-        <a href="Contents/tkb.html" target="noidung">thời khoá biểu</a>
-        <a href="Contents/BTVN2/BTVN2.html" target="noidung">Bài tập 2</a>
-        <a href="Contents/videotudonghoa.html" target="noidung">group project</a>
-        <<a href="Contents/bai7nv2.html" target="noidung">gop y</a>
-    </div>
-    <div class="noidung">
-      <iframe name="nd" height="100%" width="100%"> </iframe>
-    </div>
-    <div class="footer">Le Hoai An</div>
- </body>
-</html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="new.css">
+  <title>Danh mục bài tập</title>
+</head>
+
+<body>
+  <header>THPT Ngô Quyền</header>
+  <nav>
+    <a href="#" onclick="showContent('Contents/gioithieu.html')">giới thiệu bản thân</a>
+    <a href="#" onclick="showContent('Contents/tkb.html')">thời khoá biểu</a>
+    <a href="#" onclick="showContent('Contents/gioithieu.html')">Bài tập 2</a>
+    <a href="#" onclick="showContent('Contents/videotudonghoa.html')">group project</a>
+    <a href="#" onclick="showContent('Contents/bai7nv2.html')">gop y</a>
+  </nav>
+
+  <div class="noidung">
+    <iframe src="Contents/gioithieu.html" id="frame" frameborder="0" width="800" height="600">
+    </iframe>
+  </div>
+
+  <footer>Le Hoai An</footer>
+
+  <script>
+    function showContent(linkToNewSource) {
+      document.getElementById('frame').src = linkToNewSource
+    }
+  </script>
+</body>
